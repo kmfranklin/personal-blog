@@ -12,8 +12,14 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="'/'" :active="request()->is('/')">
+                        {{ __('Blog') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+                    </x-nav-link>
+                    <x-nav-link :href="'/posts/create'" :active="request()->is('posts/create')">
+                        {{ __('New Post') }}
                     </x-nav-link>
                 </div>
             </div>
